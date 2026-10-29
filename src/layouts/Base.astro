@@ -1,0 +1,11 @@
+---
+import site from '../data/site.json';
+import '../styles/global.css';
+const { title = 'Watercana | Conservation with every sip', description = 'Natural spring water and lasting environmental conservation in Kenya.' } = Astro.props;
+const nav = [['/','Home'],['/our-water/','Our Water'],['/our-story/','Our Story'],['/conservation/','Conservation'],['/journal/','Journal'],['/contact/','Contact']];
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="theme-color" content="#092b45"/><title>{title}</title></head><body>
+<header class="header"><div class="wrap nav"><a class="brand" href="/" aria-label="Watercana home"><span class="drop">◉</span><span>WATERCANA<small>CONSERVATION WITH EVERY SIP</small></span></a><nav aria-label="Main navigation">{nav.map(([url,name]) => <a href={url} aria-current={Astro.url.pathname===url?'page':undefined}>{name}</a>)}</nav></div></header>
+<main><slot /></main>
+<footer><div class="wrap footer-grid"><div><div class="brand footer-brand">◉ WATERCANA</div><p>Conservation with every sip.</p><p>Water that serves people and helps protect the ecosystems it comes from.</p></div><div><h3>Explore</h3><a href="/our-water/">Our Water</a><a href="/conservation/">Conservation</a><a href="/journal/">Journal</a></div><div><h3>Connect</h3><a href="/contact/">Contact us</a>{site.email && <a href={`mailto:${site.email}`}>{site.email}</a>}<p>{site.location}</p></div></div><div class="wrap fine">© {new Date().getFullYear()} Watercana. All rights reserved. · Website content is a starter draft; verify claims before launch.</div></footer>
+</body></html>

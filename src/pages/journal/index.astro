@@ -1,0 +1,6 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const posts=(await getCollection('blog',({data})=>!data.draft)).sort((a,b)=>b.data.date.valueOf()-a.data.date.valueOf());
+---
+<Base title="Conservation Journal | Watercana"><section class="page-hero"><div class="wrap"><div class="eyebrow">Watercana journal</div><h1>Stories from the source.</h1><p>Conservation notes, progress updates and ideas for a more sustainable water future.</p></div></section><section class="section"><div class="wrap"><div class="grid">{posts.map(post=><a class="card blog-card" href={`/journal/${post.id}/`}>{post.data.image ? <img src={post.data.image} alt=""/> : <div class="visual">🌱</div>}<p class="meta">{post.data.date.toLocaleDateString('en-KE',{day:'numeric',month:'long',year:'numeric'})} · {post.data.category}</p><h3>{post.data.title}</h3><p>{post.data.description}</p><span>Read article →</span></a>)}</div></div></section></Base>
