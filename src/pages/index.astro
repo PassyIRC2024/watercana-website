@@ -1,9 +1,159 @@
+
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-const posts=(await getCollection('blog', ({data})=>!data.draft)).sort((a,b)=>b.data.date.valueOf()-a.data.date.valueOf()).slice(0,3);
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 ---
-<Base><section class="hero"><div class="wrap"><div class="eyebrow">Water with a greater purpose</div><h1>Conservation<br/>with every sip.</h1><p>At Watercana, our vision is to provide natural spring water while helping safeguard the springs, forests and communities that make clean water possible.</p><a class="btn" href="/our-water/">Explore our water</a><a class="btn alt" href="/conservation/">Our conservation work</a></div></section>
-<section class="section"><div class="wrap split"><div><div class="eyebrow">More than bottled water</div><h2>A water company rooted in conservation.</h2><p class="lead">Watercana brings together a commercial water business and a long-term commitment to protect natural springs and their surrounding ecosystems.</p><p>Our model commits 20% of net profits to spring conservation and community environmental education.</p><a class="btn dark" href="/our-story/">Read our story</a></div><div class="visual" aria-label="Illustration of a water droplet">💧</div></div></section>
-<section class="section soft"><div class="wrap"><div class="eyebrow">Our focus</div><h2>Pure purpose. Lasting impact.</h2><div class="grid"><div class="card"><div class="visual">💦</div><h3>Natural spring water</h3><p>Discover our approach to water sourcing, responsible handling and quality.</p><a href="/our-water/">Learn more →</a></div><div class="card"><div class="visual">🌳</div><h3>Protecting ecosystems</h3><p>Supporting spring protection, indigenous tree planting and responsible stewardship.</p><a href="/conservation/">Explore conservation →</a></div><div class="card"><div class="visual">🤝</div><h3>Community partnership</h3><p>Building awareness of the role healthy landscapes play in securing water for the future.</p><a href="/our-story/">Our mission →</a></div></div></div></section>
-<section class="section"><div class="wrap"><div class="eyebrow">From the journal</div><h2>Stories from the source</h2><p class="lead">Follow our progress, lessons and conservation activities.</p><div class="grid">{posts.map(post=><a class="card blog-card" href={`/journal/${post.id}/`}>{post.data.image ? <img src={post.data.image} alt=""/> : <div class="visual">🌿</div>}<p class="meta">{post.data.date.toLocaleDateString('en-KE',{day:'numeric',month:'long',year:'numeric'})} · {post.data.category}</p><h3>{post.data.title}</h3><p>{post.data.description}</p></a>)}</div><p><a class="btn dark" href="/journal/">Visit our journal</a></p></div></section><section class="cta"><div class="wrap"><div class="eyebrow">Join the journey</div><h2>Water for today. Conservation for tomorrow.</h2><p>Interested in our water, institutional supply or environmental partnerships?</p><a class="btn" href="/contact/">Get in touch</a></div></section></Base>
+
+<Base>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Natural spring water · Conservation-led</div>
+      <h1>Conservation<br />with every sip.</h1>
+      <p>
+        Watercana is building a premium spring-water business in Kenya
+        with a lasting commitment to protecting the natural sources
+        that sustain us.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="/conservation/">
+          Explore our conservation model
+        </a>
+        <a class="btn alt" href="/contact/">
+          Partner with Watercana
+        </a>
+      </div>
+      <p>Preparing for launch · Commercial bottling operations not yet active</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <div class="eyebrow">Our model</div>
+        <h2>Good water begins with a protected source.</h2>
+        <p class="lead">
+          Our approach connects commercial water distribution with
+          practical spring conservation.
+        </p>
+        <p>
+          We commit <strong>20% of net profits</strong> to protecting
+          natural springs, indigenous reforestation and community
+          environmental awareness as the business begins generating profits.
+        </p>
+        <p>
+          Land adjacent to our first spring has already been acquired,
+          and conservation activities are underway.
+        </p>
+        <a class="btn dark" href="/our-story/">Discover our story</a>
+      </div>
+      <img
+        src="/images/watercana-conservation-model.png"
+        alt="Watercana conservation business model"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="wrap">
+      <div class="eyebrow">Where we are today</div>
+      <h2>From protecting the source to preparing for launch.</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>01 · Spring stewardship</h3>
+          <p>
+            Land adjacent to the natural spring has been acquired,
+            with restricted disturbance and indigenous tree planting underway.
+          </p>
+        </div>
+        <div class="card">
+          <h3>02 · Processing and bottling</h3>
+          <p>
+            We are preparing to establish the water purification and
+            bottling facility at the source. Products are not yet available for sale.
+          </p>
+        </div>
+        <div class="card">
+          <h3>03 · Conservation funded by commerce</h3>
+          <p>
+            Our business model commits 20% of future net profits to
+            spring protection and community conservation initiatives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <div class="eyebrow">The next chapter</div>
+        <h2>Water for institutions. Less single-use packaging.</h2>
+        <p class="lead">
+          Alongside bottled water, we are exploring refillable water
+          supply for schools and institutions, using durable containers
+          and a repeat-delivery model.
+        </p>
+        <p>
+          We welcome conversations with potential customers, technical
+          partners and early-stage supporters as we prepare to launch.
+        </p>
+        <a class="btn dark" href="/contact/">Explore a partnership</a>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Our conservation promise</div>
+        <h2>20%</h2>
+        <p>
+          Of net profits committed to spring conservation and
+          community environmental awareness once profitable.
+        </p>
+        <strong>Protect the source. Sustain the future.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="wrap">
+      <div class="eyebrow">From the journal</div>
+      <h2>Stories from the source.</h2>
+      <p class="lead">
+        Follow our progress and the ideas shaping a more sustainable water future.
+      </p>
+      <div class="grid">
+        {posts.map((post) => (
+          <a class="card blog-card" href={`/journal/${post.id}/`}>
+            {post.data.image
+              ? <img src={post.data.image} alt="" loading="lazy" />
+              : <div class="visual">🌿</div>}
+            <p class="meta">
+              {post.data.date.toLocaleDateString('en-KE', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+              })} · {post.data.category}
+            </p>
+            <h3>{post.data.title}</h3>
+            <p>{post.data.description}</p>
+          </a>
+        ))}
+      </div>
+      <p><a class="btn dark" href="/journal/">Visit our journal</a></p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <div class="eyebrow">Join the journey</div>
+      <h2>Help build a future where water sustains conservation.</h2>
+      <p>
+        Interested in our launch, institutional water supply
+        or conservation partnerships?
+      </p>
+      <a class="btn" href="/contact/">Get in touch</a>
+    </div>
+  </section>
+</Base>
