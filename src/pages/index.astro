@@ -9,126 +9,255 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 ---
 
 <Base>
-  <section class="hero">
-    <div class="wrap">
-      <div class="eyebrow">Natural spring water · Conservation-led</div>
-      <h1>Conservation<br />with every sip.</h1>
-      <p>
-        Watercana is building a premium spring-water business in Kenya
-        with a lasting commitment to protecting the natural sources
-        that sustain us.
-      </p>
-      <div class="hero-actions">
-        <a class="btn" href="/conservation/">
-          Explore our conservation model
-        </a>
-        <a class="btn alt" href="/contact/">
-          Partner with Watercana
-        </a>
+  <!-- HOMEPAGE HERO -->
+  <section class="watercana-hero">
+    <div class="wrap hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          Natural Spring Water · Conservation-Led
+        </div>
+
+        <h1>
+          Conservation<br />
+          with every sip.
+        </h1>
+
+        <div class="hero-accent"></div>
+
+        <p class="hero-description">
+          Watercana is building a sustainable spring-water
+          business that protects natural freshwater sources
+          while creating a commercially viable way to fund
+          their long-term conservation.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="primary-action" href="/conservation/">
+            Explore our conservation model
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <a class="secondary-action" href="/contact/">
+            Partner with Watercana
+          </a>
+        </div>
+
+        <p class="launch-status">
+          Preparing for launch · Commercial bottling has not yet commenced.
+        </p>
       </div>
-      <p>Preparing for launch · Commercial bottling operations not yet active</p>
     </div>
   </section>
 
+  <!-- MISSION, VISION & CONSERVATION PROMISE -->
+  <section class="purpose-section">
+    <div class="wrap">
+      <div class="purpose-grid">
+        <article class="purpose-item">
+          <div class="purpose-icon mission-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="24" cy="24" r="3" fill="currentColor"/>
+              <path d="M24 24L39 9M33 9h6v6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div>
+            <h2>Our Mission</h2>
+            <p>
+              To provide quality spring water through responsible
+              commercial practices that protect natural springs
+              and support surrounding communities.
+            </p>
+          </div>
+        </article>
+
+        <article class="purpose-item">
+          <div class="purpose-icon vision-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 39V23M24 29C12 29 9 20 10 10c10 0 17 5 17 15M24 27c0-11 6-17 16-18 1 12-4 20-16 20"
+                stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div>
+            <h2>Our Vision</h2>
+            <p>
+              A future where natural springs are protected
+              for generations through commercially sustainable
+              conservation.
+            </p>
+          </div>
+        </article>
+
+        <article class="purpose-item">
+          <div class="purpose-icon promise-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 5C18 14 10 23 10 30a14 14 0 0 0 28 0C38 23 30 14 24 5Z"
+                stroke="currentColor" stroke-width="2.5"
+                stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div>
+            <h2>Our Conservation Promise</h2>
+            <p>
+              Commit <strong>20% of net profits</strong>
+              to spring protection, indigenous reforestation
+              and community environmental awareness once
+              the business becomes profitable.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRESS STRIP -->
+  <section class="progress-section">
+    <div class="wrap">
+      <div class="progress-grid">
+        <div class="progress-item">
+          <span class="progress-symbol" aria-hidden="true">♣</span>
+          <div>
+            <h3>Land secured</h3>
+            <p>Adjacent to our first spring</p>
+          </div>
+        </div>
+
+        <div class="progress-item">
+          <span class="progress-symbol" aria-hidden="true">🌱</span>
+          <div>
+            <h3>Conservation underway</h3>
+            <p>Reforestation &amp; source protection</p>
+          </div>
+        </div>
+
+        <div class="progress-item">
+          <span class="progress-symbol" aria-hidden="true">◈</span>
+          <div>
+            <h3>Initial water testing completed</h3>
+            <p>Results informing treatment planning</p>
+          </div>
+        </div>
+
+        <div class="progress-item">
+          <span class="progress-symbol" aria-hidden="true">▥</span>
+          <div>
+            <h3>Next: Processing facility</h3>
+            <p>Treatment, bottling &amp; pilot distribution</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSERVATION MODEL -->
   <section class="section">
     <div class="wrap split">
       <div>
-        <div class="eyebrow">Our model</div>
-        <h2>Good water begins with a protected source.</h2>
+        <div class="eyebrow">Our Model</div>
+
+        <h2>
+          Good water begins with a protected source.
+        </h2>
+
         <p class="lead">
-          Our approach connects commercial water distribution with
-          practical spring conservation.
+          Our approach connects commercial water distribution
+          with practical spring conservation.
         </p>
+
         <p>
-          We commit <strong>20% of net profits</strong> to protecting
-          natural springs, indigenous reforestation and community
-          environmental awareness as the business begins generating profits.
+          We commit <strong>20% of net profits</strong>
+          to protecting natural springs, indigenous reforestation
+          and community environmental awareness once the
+          business begins generating profits.
         </p>
+
         <p>
-          Land adjacent to our first spring has already been acquired,
-          and conservation activities are underway.
+          Land adjacent to our first spring has already
+          been acquired, and conservation activities
+          are underway.
         </p>
-        <a class="btn dark" href="/our-story/">Discover our story</a>
+
+        <a class="btn dark" href="/our-story/">
+          Discover our story
+        </a>
       </div>
+
       <img
         src="/images/watercana-conservation-model.png"
-        alt="Watercana conservation business model"
+        alt="Illustration of Watercana's conservation-led business model"
         loading="lazy"
       />
     </div>
   </section>
 
+  <!-- COMMERCIAL DEVELOPMENT -->
   <section class="section soft">
     <div class="wrap">
-      <div class="eyebrow">Where we are today</div>
-      <h2>From protecting the source to preparing for launch.</h2>
+      <div class="eyebrow">Our Next Chapter</div>
+
+      <h2>
+        Building a responsible water business.
+      </h2>
+
+      <p class="lead">
+        We are preparing to move from spring conservation
+        into responsible water processing and distribution.
+      </p>
+
       <div class="grid">
         <div class="card">
-          <h3>01 · Spring stewardship</h3>
+          <h3>01 · Protect the source</h3>
           <p>
-            Land adjacent to the natural spring has been acquired,
-            with restricted disturbance and indigenous tree planting underway.
+            Continue responsible land stewardship,
+            indigenous reforestation and protection
+            of the spring environment.
           </p>
         </div>
+
         <div class="card">
-          <h3>02 · Processing and bottling</h3>
+          <h3>02 · Establish production</h3>
           <p>
-            We are preparing to establish the water purification and
-            bottling facility at the source. Products are not yet available for sale.
+            Develop a suitable water-treatment and bottling
+            facility, complete further water-quality testing,
+            and meet applicable regulatory requirements.
           </p>
         </div>
+
         <div class="card">
-          <h3>03 · Conservation funded by commerce</h3>
+          <h3>03 · Build distribution</h3>
           <p>
-            Our business model commits 20% of future net profits to
-            spring protection and community conservation initiatives.
+            Introduce bottled water and explore refillable
+            water-supply solutions for schools and institutions.
           </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- JOURNAL -->
   <section class="section">
-    <div class="wrap split">
-      <div>
-        <div class="eyebrow">The next chapter</div>
-        <h2>Water for institutions. Less single-use packaging.</h2>
-        <p class="lead">
-          Alongside bottled water, we are exploring refillable water
-          supply for schools and institutions, using durable containers
-          and a repeat-delivery model.
-        </p>
-        <p>
-          We welcome conversations with potential customers, technical
-          partners and early-stage supporters as we prepare to launch.
-        </p>
-        <a class="btn dark" href="/contact/">Explore a partnership</a>
-      </div>
-      <div class="card">
-        <div class="eyebrow">Our conservation promise</div>
-        <h2>20%</h2>
-        <p>
-          Of net profits committed to spring conservation and
-          community environmental awareness once profitable.
-        </p>
-        <strong>Protect the source. Sustain the future.</strong>
-      </div>
-    </div>
-  </section>
-
-  <section class="section soft">
     <div class="wrap">
-      <div class="eyebrow">From the journal</div>
+      <div class="eyebrow">From the Journal</div>
+
       <h2>Stories from the source.</h2>
+
       <p class="lead">
-        Follow our progress and the ideas shaping a more sustainable water future.
+        Follow our progress and the ideas shaping
+        a more sustainable water future.
       </p>
+
       <div class="grid">
         {posts.map((post) => (
           <a class="card blog-card" href={`/journal/${post.id}/`}>
             {post.data.image
               ? <img src={post.data.image} alt="" loading="lazy" />
               : <div class="visual">🌿</div>}
+
             <p class="meta">
               {post.data.date.toLocaleDateString('en-KE', {
                 day: 'numeric',
@@ -136,24 +265,364 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
                 year: 'numeric'
               })} · {post.data.category}
             </p>
+
             <h3>{post.data.title}</h3>
             <p>{post.data.description}</p>
           </a>
         ))}
       </div>
-      <p><a class="btn dark" href="/journal/">Visit our journal</a></p>
+
+      <p>
+        <a class="btn dark" href="/journal/">
+          Visit our journal
+        </a>
+      </p>
     </div>
   </section>
 
+  <!-- FINAL CTA -->
   <section class="cta">
     <div class="wrap">
-      <div class="eyebrow">Join the journey</div>
-      <h2>Help build a future where water sustains conservation.</h2>
+      <div class="eyebrow">Join the Journey</div>
+
+      <h2>
+        Help build a future where water sustains conservation.
+      </h2>
+
       <p>
-        Interested in our launch, institutional water supply
+        Interested in our launch, institutional water supply,
         or conservation partnerships?
       </p>
-      <a class="btn" href="/contact/">Get in touch</a>
+
+      <a class="btn" href="/contact/">
+        Get in touch
+      </a>
     </div>
   </section>
 </Base>
+
+<style>
+  .watercana-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    color: white;
+    background:
+      radial-gradient(
+        ellipse at 85% 30%,
+        rgba(31, 117, 111, 0.55),
+        transparent 48%
+      ),
+      linear-gradient(
+        110deg,
+        #073746 0%,
+        #074957 52%,
+        #123f40 100%
+      );
+  }
+
+  .watercana-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.12;
+    background:
+      linear-gradient(
+        145deg,
+        transparent 50%,
+        #9fd7b9 50%,
+        transparent 70%
+      );
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    display: flex;
+    align-items: center;
+    min-height: 610px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .hero-content {
+    width: min(100%, 820px);
+  }
+
+  .hero-eyebrow {
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #b9efdf;
+    margin-bottom: 25px;
+  }
+
+  .watercana-hero h1 {
+    font-size: clamp(3.3rem, 6.2vw, 6rem);
+    line-height: 1.06;
+    letter-spacing: -0.045em;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+  }
+
+  .hero-accent {
+    width: 90px;
+    height: 5px;
+    background: #8cf1a7;
+    margin: 26px 0 22px;
+  }
+
+  .hero-description {
+    max-width: 710px;
+    font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+    line-height: 1.65;
+    color: #f2fbfa;
+    margin: 0 0 28px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .primary-action,
+  .secondary-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+  }
+
+  .primary-action {
+    background: #b6f1c8;
+    color: #073746;
+  }
+
+  .secondary-action {
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.08);
+  }
+
+  .primary-action:hover,
+  .secondary-action:hover {
+    transform: translateY(-2px);
+  }
+
+  .launch-status {
+    margin: 24px 0 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #cde7e7;
+  }
+
+  .purpose-section {
+    padding: 45px 0;
+    background: #fff;
+  }
+
+  .purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+  }
+
+  .purpose-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    min-width: 0;
+  }
+
+  .purpose-item + .purpose-item {
+    border-left: 1px solid #d7e5e8;
+    padding-left: 25px;
+  }
+
+  .purpose-icon {
+    width: 66px;
+    height: 66px;
+    flex: 0 0 66px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+  }
+
+  .purpose-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mission-icon {
+    background: #c8eeee;
+    color: #086779;
+  }
+
+  .vision-icon {
+    background: #dcf4dc;
+    color: #157d43;
+  }
+
+  .promise-icon {
+    background: #d6f0fa;
+    color: #08708c;
+  }
+
+  .purpose-item h2 {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    color: #103949;
+    margin: 0 0 10px;
+  }
+
+  .purpose-item p {
+    font-size: 0.97rem;
+    line-height: 1.65;
+    color: #203e48;
+    margin: 0;
+  }
+
+  .progress-section {
+    padding: 34px 0;
+    color: #fff;
+    background: linear-gradient(
+      120deg,
+      #056775,
+      #064957
+    );
+  }
+
+  .progress-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .progress-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+  }
+
+  .progress-item + .progress-item {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 18px;
+  }
+
+  .progress-symbol {
+    flex: 0 0 auto;
+    font-size: 1.9rem;
+    line-height: 1;
+  }
+
+  .progress-item h3 {
+    color: #fff;
+    font-size: 0.98rem;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+
+  .progress-item p {
+    color: #e2f5f5;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @media (max-width: 1000px) {
+    .purpose-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .purpose-item + .purpose-item {
+      border-left: none;
+      border-top: 1px solid #d7e5e8;
+      padding: 25px 0 0;
+    }
+
+    .progress-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .progress-item + .progress-item {
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-inner {
+      min-height: auto;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .watercana-hero h1 {
+      font-size: clamp(2.8rem, 11vw, 4rem);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.11em;
+    }
+
+    .hero-description {
+      font-size: 1.05rem;
+    }
+
+    .hero-buttons {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .primary-action,
+    .secondary-action {
+      width: 100%;
+      text-align: center;
+    }
+
+    .purpose-section {
+      padding: 38px 0;
+    }
+
+    .purpose-icon {
+      width: 54px;
+      height: 54px;
+      flex-basis: 54px;
+    }
+
+    .purpose-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .progress-grid {
+      grid-template-columns: 1fr;
+      gap: 23px;
+    }
+
+    .progress-item {
+      align-items: flex-start;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .primary-action,
+    .secondary-action {
+      transition: none;
+    }
+  }
+</style>
