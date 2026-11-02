@@ -1,4 +1,5 @@
 
+
 media:
   input: public/images
   output: /images
@@ -25,12 +26,16 @@ content:
         label: Category
         type: select
         options:
+          - name: story
+            label: Our Story
           - name: conservation
             label: Conservation
           - name: water
             label: Water
           - name: community
             label: Community
+          - name: updates
+            label: Updates
       - name: description
         label: Short Description
         type: text
