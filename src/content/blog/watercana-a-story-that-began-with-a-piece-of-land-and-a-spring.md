@@ -5,7 +5,7 @@ category: story
 description: How a search for a family home in 2022 became a vision to protect
   natural springs for generations.
 ---
-# Watercana: A Story That Began With a Piece of Land and a Spring
+
 
 *How a search for a family home became a vision to protect natural springs for generations.*
 
