@@ -1,8 +1,73 @@
+
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
-export async function getStaticPaths(){ const posts=await getCollection('blog',({data})=>!data.draft);return posts.map(post=>({params:{slug:post.id},props:{post}})); }
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post }
+  }));
+}
+
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+const categoryLabels = {
+  story: 'Our Story',
+  conservation: 'Conservation',
+  water: 'Water',
+  community: 'Community',
+  updates: 'Updates'
+};
+
+const category =
+  categoryLabels[post.data.category] ??
+  post.data.category ??
+  'Watercana Journal';
 ---
-<Base title={`${post.data.title} | Watercana`} description={post.data.description}><article class="article"><p><a href="/journal/">← Back to journal</a></p><div class="eyebrow">{post.data.category || 'Watercana journal'}</div><h1>{post.data.title}</h1><p class="meta">{post.data.date.toLocaleDateString('en-KE',{day:'numeric',month:'long',year:'numeric'})}</p>{post.data.image && <img src={post.data.image} alt="Article cover"/>}<Content/><p><a class="btn dark" href="/journal/">More stories</a></p></article></Base>
+
+<Base
+  title={`${post.data.title} | Watercana`}
+  description={post.data.description}
+>
+  <article class="article">
+
+    <p>
+      <a href="/journal/">← Back to journal</a>
+    </p>
+
+    <div class="eyebrow">{category}</div>
+
+    <h1>{post.data.title}</h1>
+
+    <p class="meta">
+      {post.data.date.toLocaleDateString('en-KE', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+      })}
+    </p>
+
+    {post.data.image && (
+      <img
+        src={post.data.image}
+        alt="Article cover"
+        loading="lazy"
+      />
+    )}
+
+    <div class="article-content">
+      <Content />
+    </div>
+
+    <p class="article-footer">
+      <a class="btn dark" href="/journal/">
+        More stories
+      </a>
+    </p>
+
+  </article>
+</Base>
