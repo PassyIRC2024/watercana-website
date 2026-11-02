@@ -302,24 +302,27 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 </Base>
 
 <style>
-  .watercana-hero {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    color: white;
-    background:
-      radial-gradient(
-        ellipse at 85% 30%,
-        rgba(31, 117, 111, 0.55),
-        transparent 48%
-      ),
-      linear-gradient(
-        110deg,
-        #073746 0%,
-        #074957 52%,
-        #123f40 100%
-      );
-  }
+.watercana-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  color: #ffffff;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 45, 56, 0.96) 0%,
+      rgba(3, 55, 63, 0.88) 32%,
+      rgba(3, 55, 63, 0.52) 58%,
+      rgba(3, 55, 63, 0.12) 100%
+    ),
+    url('/images/watercana-hero-spring.jpg');
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #073746;
+}
 
   .watercana-hero::after {
     content: "";
