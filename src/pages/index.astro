@@ -263,7 +263,13 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric'
-              })} · {post.data.category}
+              })} · {({
+  story: 'Our Story',
+  conservation: 'Conservation',
+  water: 'Water',
+  community: 'Community',
+  updates: 'Updates'
+})[post.data.category] ?? post.data.category}
             </p>
 
             <h3>{post.data.title}</h3>
