@@ -4,6 +4,7 @@ date: 2026-11-03
 category: story
 description: How a search for a family home in 2022 became a vision to protect
   natural springs for generations.
+image: /images/Our story image.png
 ---
 *How a search for a family home became a vision to protect natural springs for generations.*
 
