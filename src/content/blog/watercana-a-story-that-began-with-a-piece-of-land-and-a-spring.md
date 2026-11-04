@@ -5,8 +5,6 @@ category: story
 description: How a search for a family home in 2022 became a vision to protect
   natural springs for generations.
 ---
-
-
 *How a search for a family home became a vision to protect natural springs for generations.*
 
 In 2022, I purchased a piece of land with a simple dream: to build a home where I could settle with my family.
@@ -109,4 +107,12 @@ It can be built into a commercially sustainable model that gives future generati
 
 And that is the story behind Watercana.
 
+**A Note from the Founder**
+
+Watercana began with a simple belief: protecting our natural water sources is just as important as making clean water accessible.
+
+What started as an investment in a piece of land has grown into a vision of building a sustainable water business that protects natural springs for generations to come.
+
+**Paskal Kipkemoi**  
+Founder, Watercana  
 *Conservation with every sip.*
