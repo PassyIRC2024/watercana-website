@@ -224,4 +224,70 @@ import Base from '../layouts/Base.astro';
   .section .card p {
     line-height: 1.7;
   }
+/* Our Water - Featured Photograph */
+
+.water-photo-section {
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.water-photo-container {
+  width: 100%;
+  background: #eaf4f9;
+}
+
+.water-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.water-photo-caption {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 55px 24px 65px;
+  text-align: center;
+}
+
+.water-photo-eyebrow {
+  display: block;
+  color: #008acb;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+}
+
+.water-photo-caption h2 {
+  color: #073b63;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.water-photo-caption p {
+  color: #465b6b;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.water-photo-caption strong {
+  display: block;
+  color: #008acb;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .water-photo-caption {
+    padding: 38px 20px 48px;
+  }
+
+  .water-photo-caption p {
+    font-size: 1rem;
+  }
+}
 </style>
