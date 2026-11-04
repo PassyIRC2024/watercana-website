@@ -40,6 +40,10 @@ content:
       - name: description
         label: Short Description
         type: text
+      - name: image
+        label: Featured Image
+        type: image
+        required: false
       - name: body
         label: Article Content
         type: rich-text
