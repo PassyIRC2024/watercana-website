@@ -1,5 +1,131 @@
+
 ---
 import Base from '../layouts/Base.astro';
 import site from '../data/site.json';
+
+const contactEmails = [
+  {
+    label: 'General inquiries',
+    email: 'info@watercana.org',
+    description: 'General questions about Watercana and our work.',
+  },
+  {
+    label: 'Water supply & partnerships',
+    email: 'sales@watercana.org',
+    description: 'Future product availability, schools, institutions and distribution partnerships.',
+  },
+  {
+    label: 'Conservation collaborations',
+    email: 'conservation@watercana.org',
+    description: 'Spring protection, reforestation and environmental partnerships.',
+  },
+];
 ---
-<Base title="Contact | Watercana"><section class="page-hero"><div class="wrap"><div class="eyebrow">Let's connect</div><h1>Talk to Watercana.</h1><p>For water supply inquiries, institutional partnerships and conservation collaborations.</p></div></section><section class="section"><div class="wrap grid two"><div class="card"><h2>Get in touch</h2><p>We're happy to hear from prospective customers, schools, businesses and environmental partners.</p>{site.email ? <p class="contact-link"><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></p> : <p class="notice">Email address to be added before launch.</p>}{site.whatsapp ? <p><a class="btn dark" href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer">Message on WhatsApp</a></p> : <p class="notice">WhatsApp number to be added before launch.</p>}<p><strong>Location:</strong> {site.location}</p></div><div class="card"><h2>Work with us</h2><p><strong>Water supply:</strong> Enquire about future product availability and institutional supply.</p><p><strong>Conservation:</strong> Connect on spring protection, reforestation and community education.</p><p class="meta">Contact details can be edited from Pages CMS under “Website contact details.”</p></div></div></section></Base>
+
+<Base title="Contact | Watercana">
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">Let's connect</div>
+      <h1>Talk to Watercana.</h1>
+      <p>
+        For water supply inquiries, institutional partnerships
+        and conservation collaborations.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid two">
+
+      <div class="card">
+        <h2>Get in touch</h2>
+        <p>
+          We're happy to hear from prospective customers,
+          schools, businesses and environmental partners.
+        </p>
+
+        {contactEmails.map((contact) => (
+          <div class="contact-detail">
+            <p>
+              <strong>{contact.label}</strong>
+            </p>
+            <p class="contact-link">
+              <a href={`mailto:${contact.email}`}>
+                {contact.email}
+              </a>
+            </p>
+            <p class="meta">{contact.description}</p>
+          </div>
+        ))}
+
+        {site.whatsapp ? (
+          <p>
+            <a
+              class="btn dark"
+              href={`https://wa.me/${site.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Message on WhatsApp
+            </a>
+          </p>
+        ) : (
+          <p class="notice">
+            WhatsApp contact will be available soon.
+          </p>
+        )}
+
+        <p>
+          <strong>Location:</strong> {site.location}
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Work with us</h2>
+
+        <p>
+          <strong>Water supply:</strong>
+          {' '}Enquire about future product availability,
+          institutional supply and distribution opportunities.
+        </p>
+
+        <p>
+          <strong>Conservation:</strong>
+          {' '}Connect with us on spring protection,
+          reforestation and community education.
+        </p>
+
+        <p>
+          <strong>Institutional partnerships:</strong>
+          {' '}We welcome conversations with schools,
+          businesses and organisations interested in
+          responsible water solutions.
+        </p>
+
+        <p>
+          <a
+            class="btn dark"
+            href="mailto:info@watercana.org?subject=Watercana%20Partnership%20Inquiry"
+          >
+            Start a conversation
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+    .contact-detail {
+      margin: 1.5rem 0;
+    }
+
+    .contact-detail p {
+      margin: 0.35rem 0;
+    }
+
+    .contact-link a {
+      overflow-wrap: anywhere;
+    }
+  </style>
+</Base>
